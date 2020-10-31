@@ -10,7 +10,7 @@ This page can help a user
 - generate a unique password using the different character types chosen by the user
 
 Links:
-- repo link
+- https://github.com/ktcwn/Password_Generator
 - github pages link
 
 Screenshots:
