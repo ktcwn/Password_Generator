@@ -16,13 +16,13 @@ var wantNumbers = confirm("Do you want numbers?")
 
 // Write password to the #password input
 function writePassword() {
-  var userPassword = generatePassword()
+  var password = generatePassword()
 
 }
 // generatePassword Function 
  function generatePassword () {
-    var passwordInput = [];
-    var newPassword = [];
+    var passwordHolder = [];
+    var password = [];
     var userAnswer = parseInt(prompt("Choose a password character length between 8 and 128."));
 
   if(!userAnswer) {
@@ -37,13 +37,13 @@ else {
 
 
 for (var i = 0; i < userAnswer; i++){
-  var randomNumber = Math.floor(Math.random() * passwordInput.length)
+  var randomNumber = Math.floor(Math.random() * passwordHolder.length)
   
-newPassword = newPassword + passwordInput[randomNumber];
+password = password + passwordHolder [randomNumber];
 }
 
 var passwordText = document.querySelector("#password"); 
-passwordText.value = newPassword;
+passwordText.value = password;
 }
 
 
