@@ -11,7 +11,7 @@ This page can help a user
 
 Links:
 - https://github.com/ktcwn/Password_Generator
-- github pages link
+- https://ktcwn.github.io/Password_Generator/
 
 Screenshots:
 - Landing Page
