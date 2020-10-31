@@ -1,3 +1,4 @@
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -12,23 +13,39 @@ var howMany = prompt("How many characters do you want?")
 var wantLowerCase = confirm("Do you want lower case?")
 var wantUpperCase = confirm("Do you want upper case?")
 var wantNumbers = confirm("Do you want numbers?")
-var wantLowerCase = confirm("Do you want lower case?")
-
-// generatePassword Function 
-function generatePassword() {
-for (var i = 0; i < lowerLetter.length; i++) {
-    
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var userPassword = generatePassword()
 
-  passwordText.value = password;
+}
+// generatePassword Function 
+ function generatePassword () {
+    var passwordInput = [];
+    var newPassword = [];
+    var userAnswer = parseInt(prompt("Choose a password character length between 8 and 128."));
+
+  if(!userAnswer) {
+  alert("Please enter a number value between 8 and 128.");
+}
+else if (userAnswer < 8 || userAnswer > 128) {
+  alert("Please choose a number between 8 and 128 characters");
+}
+else {
+  alert("Thank you! Your password will be " + userAnswer + " characters long.")
+}
+
+
+for (var i = 0; i < userAnswer; i++){
+  var randomNumber = Math.floor(Math.random() * passwordInput.length)
+  
+newPassword = newPassword + passwordInput[randomNumber];
+}
+
+var passwordText = document.querySelector("#password"); 
+passwordText.value = newPassword;
 }
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-  }
-}
